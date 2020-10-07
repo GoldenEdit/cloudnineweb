@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap');
+
+:root {
+	--main: rgb(32,68,224);
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Titillium Web', sans-serif;
+	text-transform: uppercase;
+	color: white;
+}
+
+.wrapper {
+	width: 100vw;
+	height: 100vh;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	background-color: rgba(0,0,0,.5);
+}
+
+.background-image {
+	position: fixed;
+	height: 110%;
+	width: 110%;
+	background-image: url("../img/background.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+}
+
+.content {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.content .top {
+	width: 100%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.content .top .image {
+	height: 100%;
+	width: 15vw;
+}
+
+.content .top .image img {
+	position: relative;
+	animation: bobbing 4s infinite;
+	width: 100%;
+}
+
+.content .top .buttons {
+	padding-left: 2.5vw;
+	height: 100%;
+	width: 15vw;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.content .top .buttons a {
+	width: 100%;
+	min-width: 100%;
+}
+
+.content .top .buttons .button {
+	display: inline-flex;
+}
+
+.content .top .buttons .button .icon {
+	height: 3.5vw;
+	width: 3.5vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 3.5vw;
+	background-color: rgba(32, 68, 224, 1);
+}
+
+.content .top .buttons .button .icon i {
+	color: white;
+	font-size: 2vw;
+}
+
+.content .top .buttons .button .text {
+	height: 4vw;
+	flex: 1;
+}
+
+.content .top .buttons .button .text h2 {
+	padding: 0;
+	margin: 0;
+	padding-left: .5vw;
+	font-size: 2vw;
+	color: white;
+	text-decoration: none;
+}
+
+.content .top .buttons a {
+	text-decoration: none !important;
+}
+
+.content .top .buttons a:hover .button .icon {
+	background-color: rgba(32, 68, 224, .8);
+}
+
+.content .top .buttons a:hover .button .text h2 {
+	color: rgba(255,255,255,0.75);
+}
+
+.content .bottom {
+	width: 100%;
+	text-align: center;
+	font-size: .9vw;
+}
+
+.copy {
+	text-decoration: underline;
+}
+
+.copy:hover {
+	cursor: pointer;
+}
+
+@keyframes bobbing {
+	0% {
+		transform: translateY(0vh);
+	}
+	50% {
+		transform: translateY(-1vh);
+	}
+	100% {
+		transform: translateY(0vh);
+	}
+}
+
+@media only screen and (max-width: 600px) {
+  .content .top .image {
+  	width: 50vw;
+  }
+  .content .bottom {
+	width: 100%;
+	text-align: center;
+	font-size: 3.5vw;
+  }
+
+  .content .top .buttons {
+  	padding-left: 5vw;
+  	width: 30vw;
+  }
+
+  .content .top .buttons .button .text {
+  	height: 12vw;
+  	display: flex;
+	align-items: center;
+  }
+
+  .content .top .buttons .button .text h2 {
+  	font-size: 5vw;
+  }
+
+  .content .top .buttons .button .icon {
+  	width: 12vw;
+  	height: 12vw;
+  	border-radius: 100%;
+  }
+
+  .content .top .buttons .button .icon i {
+  	font-size: 5vw;
+  }
+
+  .content {
+  	overflow: none;
+  }
+
+  .wrapper {
+  	overflow-y: none;
+  }
+}
